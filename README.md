@@ -12,7 +12,7 @@ Run the following command in your project directory:-
 ```bash
 npm install doodleui
 ```
-Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & extract it in your project directory.
+Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & then keep the `dist` folder in your project directory.
 
 ### Usage
 
