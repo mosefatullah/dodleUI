@@ -1,6 +1,6 @@
 ## DoodleUI
 
-A framework for creating UI & executing functionalities for better UI.
+A css & js framework for creating UI & executing functionalities for better UI.
 
 **Current Version** : v0.1.0
 <br/>
