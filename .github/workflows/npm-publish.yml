@@ -16,11 +16,7 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-<<<<<<< HEAD
       - run: npm run build --if-present
-=======
-      - run: npm run build
->>>>>>> 050b42b358f9318097cd57dfecf443cfb4f9848c
 
   publish-npm:
     needs: build
