@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Node.js Package
+name: DoodleUI
 
 on:
   release:
@@ -16,7 +16,11 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+<<<<<<< HEAD
       - run: npm run build --if-present
+=======
+      - run: npm run build
+>>>>>>> 050b42b358f9318097cd57dfecf443cfb4f9848c
 
   publish-npm:
     needs: build
