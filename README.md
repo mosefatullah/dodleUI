@@ -92,7 +92,7 @@ DoodleUI("#element").scroll(
 
 ### License
 
-Released under the [MIT License](https://github.com/mosefatullah/ui/blob/main/doodleui/LICENSE) <br/>
+Released under the [MIT License](https://github.com/mosefatullah/doodleui/blob/main/LICENSE) <br/>
 Copyright © 2021 [Mohammad Sefatullah]()
 
 ### Contributing
