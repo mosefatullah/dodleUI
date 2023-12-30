@@ -1,0 +1,14 @@
+{
+  "name": "doodleui",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "sass --watch scss/doodleui.scss:dist/doodleui.css",
+    "build": "sass --no-source-map scss/doodleui.scss:dist/doodleui.css && sass --no-source-map scss/doodleui.scss:dist/doodleui.min.css --style=compressed"
+  },
+  "author": "Mohammad Sefatullah",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

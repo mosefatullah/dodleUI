@@ -1,0 +1,41 @@
+/* Breadcrumb */
+.breadcrumb {
+ display: flex;
+ align-items: center;
+ padding: 0 10px;
+ height: 40px;
+ overflow-x: scroll;
+ white-space: nowrap;
+ .breadcrumb__item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  &::after {
+   content: "/";
+   margin: 0 0 0 10px;
+  }
+  & > * {
+   display: flex;
+   align-items: center;
+   height: 100%;
+   color: $grey;
+   text-decoration: none;
+   font-size: 0.8rem;
+   &:hover {
+    text-decoration: underline;
+   }
+  }
+  &.active {
+   a {
+    cursor: default;
+    color: $black;
+    &:hover {
+     text-decoration: none;
+    }
+   }
+   &::after {
+    content: "";
+   }
+  }
+ }
+}
