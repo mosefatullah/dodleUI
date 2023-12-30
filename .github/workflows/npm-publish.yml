@@ -16,8 +16,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "lts/*"
++         registry-url: "https://registry.npmjs.org"
       - name: Install dependencies and build
         run: npm ci
       - name: Publish package on NPM 📦
