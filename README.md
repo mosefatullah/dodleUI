@@ -8,9 +8,11 @@ A css & js framework for creating UI & executing functionalities for better UI.
 
 ### Installation
 
+Run the following command in your project directory:-
 ```bash
 npm install doodleui
 ```
+Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & extract it in your project directory.
 
 ### Usage
 
