@@ -2,16 +2,18 @@
 
 A css & js framework for creating UI & executing functionalities for better UI.
 
-**Current Version** : v0.1.0
+**Current Version** : v0.0.1
 <br/>
 **Created by** : Mohammad Sefatullah
 
 ### Installation
 
 Run the following command in your project directory:-
+
 ```bash
 npm install doodleui
 ```
+
 Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & then keep the `dist` folder in your project directory.
 
 ### Usage

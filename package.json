@@ -1,6 +1,6 @@
 {
   "name": "@mosefatullah/doodleui",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A css & js framework for creating UI & executing functionalities for better UI.",
   "private": false,
   "publishConfig": {
