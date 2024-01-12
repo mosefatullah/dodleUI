@@ -2,7 +2,7 @@
 
 A css & js framework for creating UI & executing functionalities for better UI.
 
-**Current Version** : v0.0.1
+**Current Version** : v0.0.2
 <br/>
 **Created by** : Mohammad Sefatullah
 
