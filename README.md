@@ -2,9 +2,10 @@
 
 A css & js framework for creating UI & executing functionalities for better UI.
 
-**Current Version** : v0.0.1
+**Current Version** : v0.0.3
 <br/>
 **Created by** : Mohammad Sefatullah
+**Last updated on** : 5 May 2024
 
 ### Installation
 
@@ -21,7 +22,7 @@ Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/
 For HTML, import the library as follows:
 
 ```html
-<script src="node_modules/doodleui/dist/doodleui.js"></script>
+<script src="node_modules/doodleui/dist/doodleui.es.js"></script>
 ```
 
 For ReactJS & other frameworks, import the library as follows:

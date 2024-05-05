@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoodleUI</title>
+    <link rel="stylesheet" href="dist/doodleui.css" />
+</head>
+
+<body>
+    <h1>DoodleUI</h1>
+    <img src="https://via.placeholder.com/150" alt="placeholder" id="img">
+    <script type="module">
+        import DoodleUI from './dist/doodleui.es.js';
+        const d = new DoodleUI("img");
+        d.zoom();
+        console.log(DoodleUI);
+    </script>
+    <!--<script src="dist/doodleui.umd.js"></script>
+    <script>
+        const d = new DoodleUI("img");
+        d.zoom();
+        console.log(d);
+    </script>-->
+</body>
+
+</html>

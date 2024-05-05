@@ -1,8 +1,17 @@
 {
   "name": "@mosefatullah/doodleui",
-  "version": "0.0.1",
-  "description": "A css & js framework for creating UI & executing functionalities for better UI.",
+  "version": "0.0.3",
+  "description": "A CSS & JavaScript framework to execute functionalities for UI improvement.",
+  "homepage": "https://github.com/mosefatullah/doodleui#readme",
   "private": false,
+  "main": "dist/doodleui.umd.js",
+  "module": "dist/doodleui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/doodleui.es.js",
+      "require": "./dist/doodleui.umd.js"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -11,8 +20,11 @@
     "url": "https://github.com/mosefatullah/doodleui.git"
   },
   "scripts": {
-    "start": "sass --watch scss/doodleui.scss:dist/doodleui.css",
-    "build": "sass --no-source-map scss/doodleui.scss:dist/doodleui.css && sass --no-source-map scss/doodleui.scss:dist/doodleui.min.css --style=compressed"
+    "dev": "vite",
+    "sass:start": "sass --watch scss/doodleui.scss:dist/doodleui.css",
+    "sass:build": "sass --no-source-map scss/doodleui.scss:dist/doodleui.css && sass --no-source-map scss/doodleui.scss:dist/doodleui.min.css --style=compressed",
+    "build": "vite build && npm run sass:build",
+    "preview": "vite preview"
   },
   "keywords": [
     "doodleui",
@@ -27,8 +39,7 @@
   "devDependencies": {
     "sass": "^1.69.5"
   },
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/mosefatullah/doodleui/issues"
-  },
-  "homepage": "https://github.com/mosefatullah/doodleui#readme"
+  }
 }
