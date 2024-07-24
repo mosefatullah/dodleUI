@@ -24,6 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Untracked files
-*.alpha
-*.beta
+# Private
+*.alpha.js
+index.html

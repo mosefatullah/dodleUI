@@ -141,20 +141,6 @@ $("#abc").observer(
 );
 ```
 
-#### 1.3. $().scroller
-
-Creates a scroller event for elements.
-
-```javascript
-$("#abc").scroller((scrolled, clientTop, clientBottom, element) => {
- if (clientTop >= scrolled) {
-  // When user reaches top of the element
- } else {
-  // When not reached
- }
-});
-```
-
 <br/>
 
 <h3 align="center">3. Utility</h3>

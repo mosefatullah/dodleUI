@@ -12,12 +12,12 @@
  */
 
 import { initObject, defaultOptions } from "./lib/_static.js";
-import Observer from "./lib/ui/observer/index.js";
-import Scroller from "./lib/ui/scroller/index.js";
-import Storage from "./lib/api/storage/index.js";
-import Keypress from "./lib/utility/keypress/index.js";
-import Zoom from "./lib/ui/zoom/index.js";
-import Location from "./lib/api/location/index.js";
+import Observer from "./lib/ui/observer.js";
+import Storage from "./lib/api/storage.js";
+import Keypress from "./lib/utility/keypress.js";
+import Zoom from "./lib/ui/zoom.js";
+import Location from "./lib/api/location.js";
+import Firebase from "./lib/api/firebase.js";
 
 export class DoodleUI {
  /*** Configuration  */
@@ -55,37 +55,19 @@ export class DoodleUI {
  zoom() {
   Zoom(null, null, this)();
  }
-
  observer(isObserving, notObserving) {
   Observer(null, null, this)(isObserving, notObserving);
- }
-
- scroller(onScroll) {
-  Scroller(null, null, this)(onScroll);
  }
 }
 
 /*** Utility */
 
-DoodleUI.storage = (type) => {
- return {
-  set: (name, value, expire) => {
-   Storage.setStorage(type, name, value, expire);
-  },
-  get: (name) => Storage.getStorage(type, name),
-  remove: (name) => {
-   Storage.removeStorage(type, name);
-  },
-  clear: () => {
-   Storage.clearStorage(type);
-  },
- };
-};
-
+DoodleUI.storage = Storage;
 DoodleUI.keypress = Keypress;
 
 /*** API */
 
 DoodleUI.location = Location;
+DoodleUI.firebase = Firebase;
 
 export default (selector, config) => new DoodleUI(selector, config);
