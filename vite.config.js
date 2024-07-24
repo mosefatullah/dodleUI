@@ -5,9 +5,9 @@ export default {
   outDir: "dist",
   lib: {
    entry: "index.js",
-   formats: ["umd", "cjs", "iife", "es"],
+   formats: ["umd", "es"],
    fileName: (format) => {
-    if (format == "umd") return `doodleui.js`;
+    if (format == "es") return `doodleui.js`;
     else return `doodleui.${format}.js`;
    },
    name: "DoodleUI",

@@ -1,93 +1,138 @@
-## DoodleUI
+<p align="center">
+  <img alt="DoodleUI" src="assets/doodleui-logo.png" height="100" />
+</p>
+<h1 align="center">DoodleUI</h1>
+<p align="center">
+    <i>Version: 1.0.0</i>
+</p>
+<p align="center">✨ A frontend library that simplifies UI functionality focusing on modern features & eliminating code redundancy.</p>
+</div>
 
-A css & js framework for creating UI & executing functionalities for better UI.
+<p align="center">
+    <a href="https://github.com/mosefatullah/doodleui/blob/master/LICENSE">
+        <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    </a>
+</p>
 
-**Current Version** : v1.0.0
 <br/>
-**Created by** : Mohammad Sefatullah
-**Last updated on** : 23 July 2024
 
-### Installation
+## ⚙️ Installation
 
-Run the following command in your project directory:-
+Run the following command in your project directory :-
 
 ```bash
 npm install doodleui
 ```
 
-Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & then keep the `dist` folder in your project directory (you can rename it eg. `doodleui`).
+Also, you can download the zip file & then keep the `dist` folder in your project directory. You can also rename the folder as you wish. For example we use `doodleui`.
 
-### Usage
+<a href="https://github.com/mosefatullah/doodleui/zipball/main">Download the zip file</a>
+
+<br/>
+
+## 📦 Importing
+
+<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js).</span></p>
+
+### ES Module
+
+Recommended and modern way to import the library in your project (eg. react).
+
+```js
+import $ from "doodleui";
+```
 
 For HTML, import the library as follows:
 
 ```html
-<script src="node_modules/doodleui/dist/doodleui.js"></script>
-<!-- Or -->
-<script type="module" src="node_modules/doodleui/dist/doodleui.es.js"></script>
+<script type="module">
+ import $ from "./doodleui/doodleui.js";
+</script>
 ```
 
-Or, directly from github source:
+Or, use import map:
 
 ```html
-<script src="https://sefatullah.me/doodleui/dist/doodleui.js"></script>
-<!-- Or -->
-<script
- type="module"
- src="https://sefatullah.me/doodleui/dist/doodleui.es.js"
-></script>
+<script type="importmap">
+ {
+  "imports": {
+   "doodleui": "/doodleui/doodleui.js"
+  }
+ }
+</script>
+<script type="module">
+ import $ from "doodleui";
+</script>
 ```
 
-For ReactJS & other frameworks, import the library as follows:
+### Universal Module Definition
 
-```javascript
-// Nodejs
-const doodleui = require("doodleui");
+UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
 
-// Modular (eg. Reactjs)
-import DoodleUI from "doodleui";
+```html
+<script src="/doodleui/doodleui.umd.js" type="text/javascript">
+ <script>
+      DoodleUI("#abc")...
+</script>
 ```
 
-### Documentation
+<br/>
 
-#### 1. DoodleUI
+## 📖 Documentation Guide
 
-##### 1.0. Selectors & Options
+<h3 align="center">1. Basics</h3>
+
+#### 1.0. Selectors
 
 ```javascript
 // String for Element(s)
-DoodleUI("#element")..
-DoodleUI(".element")..
-DoodleUI("body > img")[0]..
+DoodleUI("#abc").
+DoodleUI(".abc").
+DoodleUI("body > img")[0].
 
 // Array for NodeList
-DoodleUI([".element"])..
+DoodleUI([".abc"]).
 
 // Custom
-DoodleUI(document.getElementById("element"))..
+DoodleUI(document.getElementById("abc")).
 ```
+
+#### 1.1. Options
 
 ```javascript
 // Options
-DoodleUI("#element", {
+DoodleUI("#abc", {
  class: "mt-5 pl-2",
 });
 ```
 
-##### 1.1. DoodleUI.zoom
-
-Creates zoom in & out functionality for an image.
+#### 1.2. Process & Callback
 
 ```javascript
-DoodleUI("#element").zoom();
+ import $, {DoodleUI} from "doodleui"; // You can change $ to any name
+
+ $(). // User Interface
+ DoodleUI. // Utility & API
 ```
 
-##### 1.2. DoodleUI.observe
+<br/>
 
-Creates an intersection observer for an element.
+<h3 align="center">2. User Interface</h3>
+
+#### 2.1. $().zoom
+
+Creates a zoom effect for images.
 
 ```javascript
-DoodleUI("#element").observer(
+$("#abc").zoom();
+```
+
+#### 2.2. $().observer
+
+Creates an intersection observer for elements.
+
+```javascript
+$("#abc").observer(
  (element) => {
   // When observer is intersecting
  },
@@ -97,12 +142,12 @@ DoodleUI("#element").observer(
 );
 ```
 
-##### 1.3. DoodleUI.scroller
+#### 1.3. $().scroller
 
-Get scrolling properties for an element.
+Creates a scroller event for elements.
 
 ```javascript
-DoodleUI("#element").scroller((scrolled, clientTop, clientBottom, element) => {
+$("#abc").scroller((scrolled, clientTop, clientBottom, element) => {
  if (clientTop >= scrolled) {
   // When user reaches top of the element
  } else {
@@ -111,20 +156,83 @@ DoodleUI("#element").scroller((scrolled, clientTop, clientBottom, element) => {
 });
 ```
 
-### License
+<br/>
+
+<h3 align="center">3. Utility</h3>
+
+#### 3.1. DoodleUI.keypress
+
+Creates a keypress event for the user.
+
+```javascript
+DoodleUI.keypress((keyName, keyEvent) => {
+ if (keyName === "Ctrl+M") {
+  // When user presses control & m key
+ }
+});
+```
+
+<br/>
+
+<h3 align="center">4. API</h3>
+
+#### 4.1. DoodleUI.location
+
+Gets the location of the user.
+
+```javascript
+DoodleUI.location((position, object) => {
+ console.log(position.lat, position.long);
+});
+```
+
+#### 4.2. DoodleUI.storage
+
+Stores data in the local storage, session storage, indexedDB or cookie.
+
+Local Storage:
+
+```javascript
+DoodleUI.storage("local").set("name", "Mehmed");
+DoodleUI.storage("local").get("name");
+DoodleUI.storage("local").remove("name");
+DoodleUI.storage("local").clear();
+```
+
+Session Storage:
+
+```javascript
+DoodleUI.storage("session").set("name", "Sulaiman");
+DoodleUI.storage("session").get("name");
+DoodleUI.storage("session").remove("name");
+DoodleUI.storage("session").clear();
+```
+
+Cookie:
+
+```javascript
+DoodleUI.storage("cookie").set("name", "Murad");
+DoodleUI.storage("cookie").get("name");
+DoodleUI.storage("cookie").remove("name");
+DoodleUI.storage("cookie").clear();
+```
+
+<br/>
+
+## License
 
 Released under the [MIT License](https://github.com/mosefatullah/doodleui/blob/main/LICENSE) <br/>
 Copyright © 2024 [Mohammad Sefatullah]()
 
-### Contributing
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Support
+## Support
 
 <a href="https://www.buymeacoffee.com/mosefatullah" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="33px" width="120px"></a>
 
-### Follow Me
+## Follow Me
 
 [![Twitter](https://img.shields.io/twitter/follow/mosefatullah?style=social)](https://twitter.com/mosefatullah)
 [![GitHub](https://img.shields.io/github/followers/mosefatullah?style=social)](https://github.com/mosefatullah)
