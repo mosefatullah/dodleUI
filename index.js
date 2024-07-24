@@ -11,26 +11,26 @@
  *
  */
 
-import { initObject, defaultOptions } from "./lib/_static.js";
+import { initElement, defaultOptions } from "./lib/_static.js";
 import Observer from "./lib/ui/observer.js";
-import Storage from "./lib/api/storage.js";
+import Storage from "./lib/utility/storage.js";
 import Keypress from "./lib/utility/keypress.js";
 import Zoom from "./lib/ui/zoom.js";
-import Location from "./lib/api/location.js";
-import Firebase from "./lib/api/firebase.js";
+import Location from "./lib/utility/location.js";
+import Accessible from "./lib/utility/accessible.js";
+import Dragging from "./lib/ui/dragging.js";
 
 export class DoodleUI {
  /*** Configuration  */
 
- constructor(selector, config) {
-  this.elem = null;
-  this.elems = null;
-  this.options = null;
+ constructor(selector, options) {
+  this.selector = selector;
+  this.options = options;
 
-  const { elem: s, elems: ss, options: op } = initObject(selector, config);
-  this.elem = s;
-  this.elems = ss;
-  this.options = op;
+  const { elem, elems } = initElement(selector);
+
+  this.elem = elem;
+  this.elems = elems;
 
   this.init();
   return this instanceof DoodleUI ? this : new DoodleUI(selector);
@@ -53,10 +53,13 @@ export class DoodleUI {
  /*** UI  */
 
  zoom() {
-  Zoom(null, null, this)();
+  Zoom(this.selector, this.options)();
  }
  observer(isObserving, notObserving) {
-  Observer(null, null, this)(isObserving, notObserving);
+  Observer(this.selector, this.options)(isObserving, notObserving);
+ }
+ dragging(scopedElements) {
+  Dragging(this.selector, this.options)(scopedElements);
  }
 }
 
@@ -64,10 +67,7 @@ export class DoodleUI {
 
 DoodleUI.storage = Storage;
 DoodleUI.keypress = Keypress;
-
-/*** API */
-
 DoodleUI.location = Location;
-DoodleUI.firebase = Firebase;
+DoodleUI.accessible = Accessible;
 
 export default (selector, config) => new DoodleUI(selector, config);

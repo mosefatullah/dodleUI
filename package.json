@@ -1,7 +1,7 @@
 {
   "name": "doodleui",
   "version": "1.0.0",
-  "description": "A frontend library that simplifies UI functionality focusing on modern features & eliminating code redundancy.",
+  "description": "A frontend library that simplifies UI functionality focusing on modern features.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mosefatullah/doodleui.git"
