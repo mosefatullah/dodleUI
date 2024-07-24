@@ -6,7 +6,6 @@
     <i>Version: 1.0.0</i>
 </p>
 <p align="center">✨ A frontend library that simplifies UI functionality focusing on modern features & eliminating code redundancy.</p>
-</div>
 
 <p align="center">
     <a href="https://github.com/mosefatullah/doodleui/blob/master/LICENSE">
