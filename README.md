@@ -99,19 +99,19 @@ DoodleUI(document.getElementById("abc")).
 #### 1.1. Options
 
 ```javascript
-// Options
+// for 'dragging'
 DoodleUI("#abc", {
- class: "mt-5 pl-2",
-});
+ highlight: true,
+}).dragging(["#box1", "#box2"]);
 ```
 
-#### 1.2. Process & Callback
+#### 1.2. Using Method
 
 ```javascript
  import $, {DoodleUI} from "doodleui"; // You can change $ to any name
 
  $(). // User Interface
- DoodleUI. // Utility & API
+ DoodleUI. // Utility
 ```
 
 <br/>
@@ -141,6 +141,18 @@ $("#abc").observer(
 );
 ```
 
+#### 2.3. $().dragging
+
+Drag and drop an element.
+
+```javascript
+DoodleUI("#abc").dragging(["#box1", "#box2"]);
+
+DoodleUI("#abc", {
+ highlight: true,
+}).dragging(["#box1", "#box2"]);
+```
+
 <br/>
 
 <h3 align="center">3. Utility</h3>
@@ -157,11 +169,7 @@ DoodleUI.keypress((keyName, keyEvent) => {
 });
 ```
 
-<br/>
-
-<h3 align="center">4. API</h3>
-
-#### 4.1. DoodleUI.location
+#### 3.2. DoodleUI.location
 
 Gets the location of the user.
 
@@ -171,7 +179,7 @@ DoodleUI.location((position, object) => {
 });
 ```
 
-#### 4.2. DoodleUI.storage
+#### 3.3. DoodleUI.storage
 
 Stores data in the local storage, session storage, indexedDB or cookie.
 
@@ -200,6 +208,14 @@ DoodleUI.storage("cookie").set("name", "Murad");
 DoodleUI.storage("cookie").get("name");
 DoodleUI.storage("cookie").remove("name");
 DoodleUI.storage("cookie").clear();
+```
+
+#### 3.3. DoodleUI.accessible
+
+Accessibility tool integration!
+
+```javascript
+DoodleUI.accessible({});
 ```
 
 <br/>
