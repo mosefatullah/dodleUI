@@ -4,24 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoodleUI</title>
-    <link rel="stylesheet" href="dist/doodleui.css" />
+    <title>DoodleUI Test</title>
+    <link rel="stylesheet" href="dist/doodleui.min.css" />
+    <style>
+        body {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        div {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
     <h1>DoodleUI</h1>
-    <img src="https://via.placeholder.com/150" alt="placeholder" id="img">
+    <img src=".test/images/brown-1024x660.jpg" alt="Image" width="300">
+    <img src=".test/images/apple.png" alt="Image" width="200">
+    <canvas id="myCanvas" style="width:100%;height: 75%;border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+    <div style="margin: 1000px 0;" id="loremContainer">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, praesentium nulla hic mollitia optio
+        corruptiratione, similique maiores saepe aut reiciendis blanditiis quos molestias aliquid eos repellendus, rerum
+        voluptatum nihil. {{more}}
+    </div>
+
     <script type="module">
-        import DoodleUI from './dist/doodleui.es.js';
-        const d = new DoodleUI("img");
-        d.zoom();
-        console.log(DoodleUI);
+        import $, { DoodleUI } from './index.js';
+
+        const lorem = $("#loremContainer");
+        const imgs = $("img");
+        const obj = {
+            more: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, mollitia necessitatibus qui debitis perspiciatis porro hic laborum. Iste quasi mollitia, aspernatur ab magni aperiam, enim inventore eius facere maxime atque!"
+        }
+
+        lorem.observer(
+            (j) => {
+                const a = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, praesentium nulla hic mollitia optio corruptiratione, similique maiores saepe aut reiciendis blanditiis quos molestias aliquid eos repellendus, rerum voluptatum nihil.";
+                lorem.elem.innerHTML = "Loading...";
+                lorem.elem.style.border = "1px solid blue";
+                setTimeout(() => {
+                    lorem.elem.innerHTML = a;
+                    lorem.elem.style.border = "none";
+                }, 1000);
+            }, (k) => { }
+        );
+
+        lorem.scroller((scrolled, clientTop, clientBottom, presence) => {
+            if (scrolled > clientTop && scrolled < clientBottom + window.innerHeight + 200) {
+                lorem.elem.style.width = "100%";
+            } else {
+                lorem.elem.style.width = "50%";
+            }
+        });
+        imgs.zoom();
+
+        DoodleUI.storage("idb").set("test", {
+            table: "me",
+            value: {
+                name: "sefat"
+            }
+        });
+
+        DoodleUI.storage("cookie").set("test", {
+            name: "sefat"
+        });
+
+        DoodleUI.keypress((a, b) => {
+            if (a == "Ctrl+M") {
+                console.info("Ctrl+M Pressed!");
+            } else {
+                console.log(a);
+            }
+        })
+
+        DoodleUI.API.location((d) => {
+            console.log(d);
+        })
+
+        /*$("#myCanvas").canvas.text({ value: "Hello World!", size: 20, font: "sans-serif", xy: [10, 50] });
+        $("#myCanvas").canvas.rect({ width: 5, start: [[100, 80]], end: [[100, 100]], stroke: "red" });*/
     </script>
-    <!--<script src="dist/doodleui.umd.js"></script>
+
+    <!--<script src="dist/doodleui.js"></script>
     <script>
-        const d = new DoodleUI("img");
-        d.zoom();
-        console.log(d);
+        new DoodleUI("img").zoom();
     </script>-->
 </body>
 

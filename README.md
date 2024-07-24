@@ -2,10 +2,10 @@
 
 A css & js framework for creating UI & executing functionalities for better UI.
 
-**Current Version** : v0.0.3
+**Current Version** : v1.0.0
 <br/>
 **Created by** : Mohammad Sefatullah
-**Last updated on** : 5 May 2024
+**Last updated on** : 23 July 2024
 
 ### Installation
 
@@ -15,20 +15,37 @@ Run the following command in your project directory:-
 npm install doodleui
 ```
 
-Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & then keep the `dist` folder in your project directory.
+Or, you can download the [zip](https://github.com/mosefatullah/doodleui/zipball/main) file & then keep the `dist` folder in your project directory (you can rename it eg. `doodleui`).
 
 ### Usage
 
 For HTML, import the library as follows:
 
 ```html
-<script src="node_modules/doodleui/dist/doodleui.es.js"></script>
+<script src="node_modules/doodleui/dist/doodleui.js"></script>
+<!-- Or -->
+<script type="module" src="node_modules/doodleui/dist/doodleui.es.js"></script>
+```
+
+Or, directly from github source:
+
+```html
+<script src="https://sefatullah.me/doodleui/dist/doodleui.js"></script>
+<!-- Or -->
+<script
+ type="module"
+ src="https://sefatullah.me/doodleui/dist/doodleui.es.js"
+></script>
 ```
 
 For ReactJS & other frameworks, import the library as follows:
 
 ```javascript
+// Nodejs
 const doodleui = require("doodleui");
+
+// Modular (eg. Reactjs)
+import DoodleUI from "doodleui";
 ```
 
 ### Documentation
@@ -38,14 +55,16 @@ const doodleui = require("doodleui");
 ##### 1.0. Selectors & Options
 
 ```javascript
-// String for Single Element
-DoodleUI("#element");
+// String for Element(s)
+DoodleUI("#element")..
+DoodleUI(".element")..
+DoodleUI("body > img")[0]..
 
 // Array for NodeList
-DoodleUI([".element"]);
+DoodleUI([".element"])..
 
 // Custom
-DoodleUI(document.getElementById("element"));
+DoodleUI(document.getElementById("element"))..
 ```
 
 ```javascript
@@ -65,34 +84,31 @@ DoodleUI("#element").zoom();
 
 ##### 1.2. DoodleUI.observe
 
-Creates an observer for an element.
+Creates an intersection observer for an element.
 
 ```javascript
-DoodleUI("#element").observe(
+DoodleUI("#element").observer(
  (element) => {
-  // When Observer is intersecting
+  // When observer is intersecting
  },
  (element) => {
-  // When Observer is not intersecting
+  // When observer is not intersecting
  }
 );
 ```
 
-##### 1.3. DoodleUI.scroll
+##### 1.3. DoodleUI.scroller
 
-Creates a scroll functionality for an element.
+Get scrolling properties for an element.
 
 ```javascript
-DoodleUI("#element").scroll(
- (scrollTopOfElement, scrollTopOfWindow, element) => {
-  // Logics
-  if (scrollTopOfElement >= scrollTopOfWindow) {
-   // When user reaches the top of the element
-  } else {
-   // When not reached
-  }
+DoodleUI("#element").scroller((scrolled, clientTop, clientBottom, element) => {
+ if (clientTop >= scrolled) {
+  // When user reaches top of the element
+ } else {
+  // When not reached
  }
-);
+});
 ```
 
 ### License
