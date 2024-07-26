@@ -218,4 +218,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 [![Instagram](https://img.shields.io/badge/Instagram-mosefatullah-red?style=flat-square&logo=instagram)](https://www.instagram.com/mosefatullah/)
 [![Facebook](https://img.shields.io/badge/Facebook-mosefatullah-blue?style=flat-square&logo=facebook)](https://www.facebook.com/mosefatullah/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mosefatullah-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/mosefatullah/)
-[![YouTube](https://img.shields.io/badge/YouTube-mosefatullah-red?style=flat-square&logo=youtube)](https://www.youtube.com/channel/UCQfjLWq7nSCaZgX6PnOYjzQ)
+[![YouTube](https://img.shields.io/badge/YouTube-mosefatullah-red?style=flat-square&logo=youtube)](https://www.youtube.com/@mohammad-sefatullah)
