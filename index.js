@@ -13,7 +13,6 @@
 
 import { initElement, defaultOptions } from "./lib/_static.js";
 import Observer from "./lib/ui/observer.js";
-import Storage from "./lib/utility/storage.js";
 import Keypress from "./lib/utility/keypress.js";
 import Zoom from "./lib/ui/zoom.js";
 import Location from "./lib/utility/location.js";
@@ -65,7 +64,6 @@ export class DoodleUI {
 
 /*** Utility */
 
-DoodleUI.storage = Storage;
 DoodleUI.keypress = Keypress;
 DoodleUI.location = Location;
 DoodleUI.accessible = Accessible;

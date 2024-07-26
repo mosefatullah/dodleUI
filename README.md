@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">DoodleUI</h1>
 <p align="center">
-    <i>Version: 1.0.0</i>
+    <i>Version: 1.0.0 (First Release)</i>
 </p>
 <p align="center">✨ A frontend library that simplifies UI functionality focusing on modern features.</p>
 
@@ -31,9 +31,9 @@ Also, you can download the zip file & then keep the `dist` folder in your projec
 
 ## 📦 Importing
 
-<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js).</span></p>
+<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js). Also at right now, we have no guide about DoodleUI CSS.</span></p>
 
-### ES Module
+### JavaScript: ES Module
 
 Recommended and modern way to import the library in your project (eg. react).
 
@@ -64,7 +64,7 @@ Or, use import map:
 </script>
 ```
 
-### Universal Module Definition
+### JavaScript: Universal Module Definition
 
 UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
 
@@ -73,6 +73,14 @@ UMD (Universal Module Definition) patterns for JavaScript modules that work ever
  <script>
       DoodleUI("#abc")...
 </script>
+```
+
+### CSS: Importing
+
+```html
+<link rel="stylesheet" href="/doodleui/doodleui.css" />
+...
+<button class="m-5 button_red"></button>
 ```
 
 <br/>
@@ -179,38 +187,7 @@ DoodleUI.location((position, object) => {
 });
 ```
 
-#### 3.3. DoodleUI.storage
-
-Stores data in the local storage, session storage, indexedDB or cookie.
-
-Local Storage:
-
-```javascript
-DoodleUI.storage("local").set("name", "Mehmed");
-DoodleUI.storage("local").get("name");
-DoodleUI.storage("local").remove("name");
-DoodleUI.storage("local").clear();
-```
-
-Session Storage:
-
-```javascript
-DoodleUI.storage("session").set("name", "Sulaiman");
-DoodleUI.storage("session").get("name");
-DoodleUI.storage("session").remove("name");
-DoodleUI.storage("session").clear();
-```
-
-Cookie:
-
-```javascript
-DoodleUI.storage("cookie").set("name", "Murad");
-DoodleUI.storage("cookie").get("name");
-DoodleUI.storage("cookie").remove("name");
-DoodleUI.storage("cookie").clear();
-```
-
-#### 3.3. DoodleUI.accessible
+#### 3.3. DoodleUI.accessible (beta)
 
 Accessibility tool integration!
 
