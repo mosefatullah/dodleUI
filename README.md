@@ -33,20 +33,31 @@ Also, you can download the zip file & then keep the `dist` folder in your projec
 
 ### CDN
 
-You can use recommended ES6 module system:
+DodleUI CSS:
 ```html
-<script src="https://unpkg.com/dodleui@1.0.0"></script>
+<link rel="stylesheet" href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.min.css"></script>
+```
+
+For DodleUI JS, you can use recommended ES6 module system:
+```html
+<script type="module">
+  import $ from "https://unpkg.com/dodleui@1.0.0";
+  ...
+</script>
 ```
 Or, you can use old system:
 ```html
 <script src="https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js"></script>
+<script type="text/javascript">
+  ...
+</script>
 ```
 
 <br/>
 
 ## 📦 Importing
 
-Here, we have imported dodleui after downloading zip file. But, you can use CDN as it saves time and cost.
+Here, we have imported DodleUI after downloading the zip file. But, you can use CDN as it saves time and cost.
 
 ### JavaScript: ES Module
 
