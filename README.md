@@ -33,7 +33,7 @@ Also, you can download the zip file & then keep the `dist` folder in your projec
 
 ### CDN
 
-DodleUI CSS:
+For DodleUI CSS, use:
 ```html
 <link rel="stylesheet" href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.min.css"></script>
 ```
