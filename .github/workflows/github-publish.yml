@@ -1,8 +1,9 @@
 name: Publish Package to github
 
 on:
-  release:
-    types: [created]
+push:
+    # only trigger on branches, not on tags
+    branches: '**'
 
 jobs:
   build:
