@@ -29,6 +29,12 @@ Also, you can download the zip file & then keep the `dist` folder in your projec
 
 <a href="https://github.com/mosefatullah/dodleui/zipball/main">Download the zip file</a>
 
+### CDN
+
+```html
+<script src="https://unpkg.com/dodleui@1.0.0"></script>
+```
+
 <br/>
 
 ## 📦 Importing
