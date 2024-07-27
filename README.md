@@ -23,6 +23,8 @@ Run the following command in your project directory :-
 npm install dodleui
 ```
 
+<p>View <a href="https://npmjs.com/package/dodleui">npm package</a> or <a href="https://yarnpkg.com/package/dodleui">yarn package</a></p>.
+
 Also, you can download the zip file & then keep the `dist` folder in your project directory. You can also rename the folder as you wish. For example we use `dodleui`.
 
 <a href="https://github.com/mosefatullah/dodleui/zipball/main">Download the zip file</a>
