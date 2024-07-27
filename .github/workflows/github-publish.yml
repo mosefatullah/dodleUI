@@ -17,9 +17,7 @@ jobs:
           node-version: '20.x'
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm login --registry=https://npm.pkg.github.com/ --scope=@mosefatullah
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.TOKEN_GITHUB}}
+      - run: npm login --registry=https://npm.pkg.github.com/ --scope=@mosefatullah --username mosefatullah --password ${{secrets.TOKEN_GITHUB}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN_GITHUB}} 
