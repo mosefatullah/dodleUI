@@ -1,14 +1,14 @@
 <p align="center">
-  <img alt="DoodleUI" src="assets/doodleui-logo.png" height="100" />
+  <img alt="DodleUI" src="assets/dodleui-logo.png" height="100" />
 </p>
-<h1 align="center">DoodleUI</h1>
+<h1 align="center">DodleUI</h1>
 <p align="center">
     <i>Version: 1.0.0 (First Release)</i>
 </p>
 <p align="center">✨ A frontend library that simplifies UI functionality focusing on modern features.</p>
 
 <p align="center">
-    <a href="https://github.com/mosefatullah/doodleui/blob/master/LICENSE">
+    <a href="https://github.com/mosefatullah/dodleui/blob/master/LICENSE">
         <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" />
     </a>
 </p>
@@ -20,32 +20,32 @@
 Run the following command in your project directory :-
 
 ```bash
-npm install doodleui
+npm install dodleui
 ```
 
-Also, you can download the zip file & then keep the `dist` folder in your project directory. You can also rename the folder as you wish. For example we use `doodleui`.
+Also, you can download the zip file & then keep the `dist` folder in your project directory. You can also rename the folder as you wish. For example we use `dodleui`.
 
-<a href="https://github.com/mosefatullah/doodleui/zipball/main">Download the zip file</a>
+<a href="https://github.com/mosefatullah/dodleui/zipball/main">Download the zip file</a>
 
 <br/>
 
 ## 📦 Importing
 
-<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js). Also at right now, we have no guide about DoodleUI CSS.</span></p>
+<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js). Also at right now, we have no guide about DodleUI CSS.</span></p>
 
 ### JavaScript: ES Module
 
 Recommended and modern way to import the library in your project (eg. react).
 
 ```js
-import $ from "doodleui";
+import $ from "dodleui";
 ```
 
 For HTML, import the library as follows:
 
 ```html
 <script type="module">
- import $ from "./doodleui/doodleui.js";
+ import $ from "./dodleui/dodleui.js";
 </script>
 ```
 
@@ -55,12 +55,12 @@ Or, use import map:
 <script type="importmap">
  {
   "imports": {
-   "doodleui": "/doodleui/doodleui.js"
+   "dodleui": "/dodleui/dodleui.js"
   }
  }
 </script>
 <script type="module">
- import $ from "doodleui";
+ import $ from "dodleui";
 </script>
 ```
 
@@ -69,16 +69,16 @@ Or, use import map:
 UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
 
 ```html
-<script src="/doodleui/doodleui.umd.js" type="text/javascript">
+<script src="/dodleui/dodleui.umd.js" type="text/javascript">
  <script>
-      DoodleUI("#abc")...
+      DodleUI("#abc")...
 </script>
 ```
 
 ### CSS: Importing
 
 ```html
-<link rel="stylesheet" href="/doodleui/doodleui.css" />
+<link rel="stylesheet" href="/dodleui/dodleui.css" />
 ...
 <button class="m-5 button_red"></button>
 ```
@@ -93,22 +93,22 @@ UMD (Universal Module Definition) patterns for JavaScript modules that work ever
 
 ```javascript
 // String for Element(s)
-DoodleUI("#abc").
-DoodleUI(".abc").
-DoodleUI("body > img")[0].
+DodleUI("#abc").
+DodleUI(".abc").
+DodleUI("body > img")[0].
 
 // Array for NodeList
-DoodleUI([".abc"]).
+DodleUI([".abc"]).
 
 // Custom
-DoodleUI(document.getElementById("abc")).
+DodleUI(document.getElementById("abc")).
 ```
 
 #### 1.1. Options
 
 ```javascript
 // for 'dragging'
-DoodleUI("#abc", {
+DodleUI("#abc", {
  highlight: true,
 }).dragging(["#box1", "#box2"]);
 ```
@@ -116,10 +116,10 @@ DoodleUI("#abc", {
 #### 1.2. Using Method
 
 ```javascript
- import $, {DoodleUI} from "doodleui"; // You can change $ to any name
+ import $, {DodleUI} from "dodleui"; // You can change $ to any name
 
  $(). // User Interface
- DoodleUI. // Utility
+ DodleUI. // Utility
 ```
 
 <br/>
@@ -154,9 +154,9 @@ $("#abc").observer(
 Drag and drop an element.
 
 ```javascript
-DoodleUI("#abc").dragging(["#box1", "#box2"]);
+DodleUI("#abc").dragging(["#box1", "#box2"]);
 
-DoodleUI("#abc", {
+DodleUI("#abc", {
  highlight: true,
 }).dragging(["#box1", "#box2"]);
 ```
@@ -165,41 +165,41 @@ DoodleUI("#abc", {
 
 <h3 align="center">3. Utility</h3>
 
-#### 3.1. DoodleUI.keypress
+#### 3.1. DodleUI.keypress
 
 Creates a keypress event for the user.
 
 ```javascript
-DoodleUI.keypress((keyName, keyEvent) => {
+DodleUI.keypress((keyName, keyEvent) => {
  if (keyName === "Ctrl+M") {
   // When user presses control & m key
  }
 });
 ```
 
-#### 3.2. DoodleUI.location
+#### 3.2. DodleUI.location
 
 Gets the location of the user.
 
 ```javascript
-DoodleUI.location((position, object) => {
+DodleUI.location((position, object) => {
  console.log(position.lat, position.long);
 });
 ```
 
-#### 3.3. DoodleUI.accessible (beta)
+#### 3.3. DodleUI.accessible (beta)
 
 Accessibility tool integration!
 
 ```javascript
-DoodleUI.accessible({});
+DodleUI.accessible({});
 ```
 
 <br/>
 
 ## License
 
-Released under the [MIT License](https://github.com/mosefatullah/doodleui/blob/main/LICENSE) <br/>
+Released under the [MIT License](https://github.com/mosefatullah/dodleui/blob/main/LICENSE) <br/>
 Copyright © 2024 [Mohammad Sefatullah]()
 
 ## Contributing

@@ -9,13 +9,13 @@ const p = (t, o) => {
   if (((e.options = S), typeof t == "string")) {
    const r = document.querySelectorAll(t);
    if (r) r.length == 1 ? (e.elem = r[0]) : (e.elems = r);
-   else throw new Error("(DoodleUI) Element not found!");
+   else throw new Error("(DodleUI) Element not found!");
    o && typeof o == "object" && (e.options = Object.assign(e.options, o));
   } else if (t && Array.isArray(t)) {
    if (typeof t[0] == "string") {
     const r = document.querySelectorAll(t[0]);
     if (r) r.length == 1 ? (e.elem = r[0]) : (e.elems = r);
-    else throw new Error("(DoodleUI) Elements not found!");
+    else throw new Error("(DodleUI) Elements not found!");
    }
    o && typeof o == "object" && (e.options = Object.assign(e.options, o));
   } else if (t && typeof t == "object")
@@ -28,7 +28,7 @@ const p = (t, o) => {
      ? (e.elems = t.querySelectorAll("*"))
      : (e.options = Object.assign(e.options, t));
   else if (t == null)
-   throw new Error("(DoodleUI) Selector is empty! Provide a selector.");
+   throw new Error("(DodleUI) Selector is empty! Provide a selector.");
   return e;
  },
  w = (t, o) => {
@@ -48,7 +48,7 @@ const p = (t, o) => {
     w(r, (s) => {
      if (((s["data-dui-observe"] = !0), !("IntersectionObserver" in window)))
       throw new Error(
-       "(DoodleUI) Observer: intersectionObserver is not supported by your browser!"
+       "(DodleUI) Observer: intersectionObserver is not supported by your browser!"
       );
      new IntersectionObserver((d) => {
       d.forEach((c) => {
@@ -75,7 +75,7 @@ const p = (t, o) => {
        if (typeof i == "function") i(d, s, l, n);
        else
         throw new Error(
-         "(DoodleUI) Scroller: onScroll (arg1) is not a function!"
+         "(DodleUI) Scroller: onScroll (arg1) is not a function!"
         );
       });
     });
@@ -148,7 +148,7 @@ const p = (t, o) => {
    } else if (f(t) === "indexedDB") {
     "indexedDB" in window ||
      (i = {
-      error: "(DoodleUI) Storage: this browser doesn't support IndexedDB!",
+      error: "(DodleUI) Storage: this browser doesn't support IndexedDB!",
      });
     let n = indexedDB.open(o, 1);
     (n.onupgradeneeded = function (s) {
@@ -193,13 +193,13 @@ const p = (t, o) => {
         .add(e.value)
         .addEventListener("success", () => {
          i = {
-          error: "(DoodleUI) Storage: data added to the database successfully!",
+          error: "(DodleUI) Storage: data added to the database successfully!",
          };
         }),
         d.addEventListener("error", () => {
          i = {
           error:
-           "(DoodleUI) Storage: transaction of indexedDB not opened due to error!",
+           "(DodleUI) Storage: transaction of indexedDB not opened due to error!",
          };
         }),
         l.close();
@@ -230,7 +230,7 @@ const p = (t, o) => {
    } else if (f(t) === "indexedDB") {
     "indexedDB" in window ||
      (e = {
-      error: "(DoodleUI) Storage: this browser doesn't support IndexedDB!",
+      error: "(DodleUI) Storage: this browser doesn't support IndexedDB!",
      });
     let r = indexedDB.open(o, 1);
     (r.onsuccess = function (i) {
@@ -241,7 +241,7 @@ const p = (t, o) => {
      };
     }),
      (r.onerror = function (i) {
-      e = { error: "(DoodleUI) Stoarge: " + i.target.error };
+      e = { error: "(DodleUI) Stoarge: " + i.target.error };
      });
    } else if (f(t) === "session") {
     let r = sessionStorage.getItem(o);
@@ -262,7 +262,7 @@ const p = (t, o) => {
      : f(t) === "indexedDB"
      ? ("indexedDB" in window ||
         (e = {
-         error: "(DoodleUI) Storage: this browser doesn't support IndexedDB!",
+         error: "(DodleUI) Storage: this browser doesn't support IndexedDB!",
         }),
        indexedDB.deleteDatabase(o))
      : f(t) === "session"
@@ -279,7 +279,7 @@ const p = (t, o) => {
      : f(t) === "indexedDB"
      ? ("indexedDB" in window ||
         (o = {
-         error: "(DoodleUI) Storage: this browser doesn't support IndexedDB!",
+         error: "(DodleUI) Storage: this browser doesn't support IndexedDB!",
         }),
        indexedDB.databases().then((e) => {
         Array.isArray(e) &&
@@ -324,9 +324,7 @@ const p = (t, o) => {
    )
     t(o, r);
    else
-    throw new Error(
-     "(DoodleUI) Keypress: onKeypress (arg1) is not a function!"
-    );
+    throw new Error("(DodleUI) Keypress: onKeypress (arg1) is not a function!");
   };
  },
  U = (t, o, e) => {
@@ -387,10 +385,10 @@ const p = (t, o) => {
     );
    else
     throw new Error(
-     "(DoodleUI) Location: geolocation is not supported by your browser!"
+     "(DodleUI) Location: geolocation is not supported by your browser!"
     );
   else
-   throw new Error("(DoodleUI) Location: onLocation (arg1) is not a function!");
+   throw new Error("(DodleUI) Location: onLocation (arg1) is not a function!");
  },
  g = class g {
   /*** Configuration  */
@@ -443,4 +441,4 @@ u.storage = (t) => ({
 u.keypress = B;
 u.location = j;
 const C = (t, o) => new u(t, o);
-export { u as DoodleUI, C as default };
+export { u as DodleUI, C as default };

@@ -7,10 +7,10 @@ export default {
    entry: "index.js",
    formats: ["umd", "es"],
    fileName: (format) => {
-    if (format == "es") return `doodleui.js`;
-    else return `doodleui.${format}.js`;
+    if (format == "es") return `dodleui.js`;
+    else return `dodleui.${format}.js`;
    },
-   name: "DoodleUI",
+   name: "DodleUI",
   },
  },
 };

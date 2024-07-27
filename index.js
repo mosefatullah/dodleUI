@@ -1,13 +1,13 @@
 /**
- * DoodleUI v1.0.0
+ * DodleUI v1.0.0
  * by Mohammad Sefatullah
  *
  * Github Link:-
- * https://github.com/mosefatullah/doodleui
+ * https://github.com/mosefatullah/dodleui
  *
  * Copyright (c)
  * Released under the MIT license
- * https://github.com/mosefatullah/doodleui/blob/main/LICENSE
+ * https://github.com/mosefatullah/dodleui/blob/main/LICENSE
  *
  */
 
@@ -19,7 +19,7 @@ import Location from "./lib/utility/location.js";
 import Accessible from "./lib/utility/accessible.js";
 import Dragging from "./lib/ui/dragging.js";
 
-export class DoodleUI {
+export class DodleUI {
  /*** Configuration  */
 
  constructor(selector, options) {
@@ -32,7 +32,7 @@ export class DoodleUI {
   this.elems = elems;
 
   this.init();
-  return this instanceof DoodleUI ? this : new DoodleUI(selector);
+  return this instanceof DodleUI ? this : new DodleUI(selector);
  }
 
  static defaults = defaultOptions;
@@ -64,8 +64,8 @@ export class DoodleUI {
 
 /*** Utility */
 
-DoodleUI.keypress = Keypress;
-DoodleUI.location = Location;
-DoodleUI.accessible = Accessible;
+DodleUI.keypress = Keypress;
+DodleUI.location = Location;
+DodleUI.accessible = Accessible;
 
-export default (selector, config) => new DoodleUI(selector, config);
+export default (selector, config) => new DodleUI(selector, config);

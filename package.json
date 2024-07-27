@@ -1,19 +1,19 @@
 {
-  "name": "doodleui",
+  "name": "dodleui",
   "version": "1.0.0",
   "description": "A frontend library that simplifies UI functionality focusing on modern features.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mosefatullah/doodleui.git"
+    "url": "git+https://github.com/mosefatullah/dodleui.git"
   },
   "author": "Mohammad Sefatullah <mosefatullah@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mosefatullah/doodleui/issues"
+    "url": "https://github.com/mosefatullah/dodleui/issues"
   },
-  "homepage": "https://github.com/mosefatullah/doodleui#readme",
+  "homepage": "https://github.com/mosefatullah/dodleui#readme",
   "keywords": [
-    "doodleui",
+    "dodleui",
     "ui library",
     "ui design",
     "ui functionalities",
@@ -32,8 +32,8 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "sass:start": "sass --watch scss/doodleui.scss:dist/doodleui.css",
-    "sass:build": "sass --no-source-map scss/doodleui.scss:dist/doodleui.css && sass --no-source-map scss/doodleui.scss:dist/doodleui.min.css --style=compressed",
+    "sass:start": "sass --watch scss/dodleui.scss:dist/dodleui.css",
+    "sass:build": "sass --no-source-map scss/dodleui.scss:dist/dodleui.css && sass --no-source-map scss/dodleui.scss:dist/dodleui.min.css --style=compressed",
     "build": "vite build && npm run sass:build"
   },
   "devDependencies": {
