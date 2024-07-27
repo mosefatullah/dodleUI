@@ -18,6 +18,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: echo //npm.pkg.github.com/:_authToken=${{secrets.TOKEN_GITHUB}} > ~/.npmrc
+      - run: npm adduser --registry https://npm.pkg.github.com/ --scope=@mosefatullah
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN_GITHUB}} 
