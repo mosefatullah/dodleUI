@@ -1,7 +1,7 @@
 name: Publish Package to github
 
 on:
-push:
+  push:
     # only trigger on branches, not on tags
     branches: '**'
 
