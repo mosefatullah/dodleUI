@@ -13,6 +13,8 @@
     </a>
 </p>
 
+<p>(ℹ️) <span style="color: #999">We have no guide about DodleUI CSS at right now. Soon, we'll update it.</span></p>
+
 <br/>
 
 ## ⚙️ Installation
@@ -31,15 +33,20 @@ Also, you can download the zip file & then keep the `dist` folder in your projec
 
 ### CDN
 
+You can use recommended ES6 module system:
 ```html
 <script src="https://unpkg.com/dodleui@1.0.0"></script>
+```
+Or, you can use old system:
+```html
+<script src="https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js"></script>
 ```
 
 <br/>
 
 ## 📦 Importing
 
-<p>(ℹ️) <span style="color: #999">This version is not efficient to directly import the module libraries (lib/*/index.js). Also at right now, we have no guide about DodleUI CSS.</span></p>
+Here, we have imported dodleui after downloading zip file. But, you can use CDN as it saves time and cost.
 
 ### JavaScript: ES Module
 
