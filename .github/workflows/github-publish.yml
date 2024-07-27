@@ -21,4 +21,4 @@ jobs:
       - run: echo registry=https://npm.pkg.github.com/mosefatullah >> .npmrc
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.TOKEN_GITHUB}}
+          NODE_AUTH_TOKEN: ${{secrets.TOKEN_GITHUB}} 
