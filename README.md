@@ -42,14 +42,14 @@ For DodleUI JS, you can use recommended ES6 module system:
 ```html
 <script type="module">
   import $ from "https://unpkg.com/dodleui@1.0.0";
-  ...
+  $()...
 </script>
 ```
 Or, you can use old system:
 ```html
 <script src="https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js"></script>
 <script type="text/javascript">
-  ...
+  new DodleUI()...
 </script>
 ```
 
