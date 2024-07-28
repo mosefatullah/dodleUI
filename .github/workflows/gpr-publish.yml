@@ -19,10 +19,15 @@ jobs:
         node-version: '14'
 
     - name: Configure npm for GitHub Packages
-      run: echo "@mosefatullah:registry=https://npm.pkg.github.com/mosefatullah:_authToken=${{ secrets.TOKEN_GITHUB }}" > ~/.npmrc
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN_GITHUB }}" > ~/.npmrc
+        echo "@mosefatullah:registry=https://npm.pkg.github.com" >> ~/.npmrc
+
+    - name: Update package name
+      run: |
+        sed -i 's/"name": "dodleui"/"name": "@mosefatullah\/dodleui"/' package.json
 
     - name: Publish to GitHub Packages
       run: npm publish --registry=https://npm.pkg.github.com
       env:
         NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-
