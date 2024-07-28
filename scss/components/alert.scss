@@ -1,0 +1,182 @@
+/* Alert */
+[class^="alert__"],
+.alert {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding: 0.3rem 0.5rem;
+ border: 2px solid transparent;
+ border-radius: 4px;
+ cursor: pointer;
+ p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 0.875rem;
+ }
+ a {
+  min-width: fit-content;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.875rem;
+  &:hover {
+   text-decoration: underline;
+  }
+ }
+}
+.alert {
+ &__red {
+  color: $text-red-sub;
+  background-color: $red-sub;
+  a {
+   color: $text-red-sub;
+  }
+  &:hover {
+   background-color: darken($red-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $red;
+  }
+ }
+ &__orange {
+  color: $text-orange-sub;
+  background-color: $orange-sub;
+  a {
+   color: $text-orange-sub;
+  }
+  &:hover {
+   background-color: darken($orange-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $orange;
+  }
+ }
+ &__yellow {
+  color: $text-yellow-sub;
+  background-color: $yellow-sub;
+  a {
+   color: $text-yellow-sub;
+  }
+  &:hover {
+   background-color: darken($yellow-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $yellow;
+  }
+ }
+ &__green {
+  color: $text-green-sub;
+  background-color: $green-sub;
+  a {
+   color: $text-green-sub;
+  }
+  &:hover {
+   background-color: darken($green-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $green;
+  }
+ }
+ &__blue {
+  color: $text-blue-sub;
+  background-color: $blue-sub;
+  a {
+   color: $text-blue-sub;
+  }
+  &:hover {
+   background-color: darken($blue-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $blue;
+  }
+ }
+ &__indigo {
+  color: $text-indigo-sub;
+  background-color: $indigo-sub;
+  a {
+   color: $text-indigo-sub;
+  }
+  &:hover {
+   background-color: darken($indigo-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $indigo;
+  }
+ }
+ &__violet {
+  color: $text-violet-sub;
+  background-color: $violet-sub;
+  a {
+   color: $text-violet-sub;
+  }
+  &:hover {
+   background-color: darken($violet-sub, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $violet;
+  }
+ }
+ &__light {
+  color: $dark;
+  background-color: $light;
+  a {
+   color: $dark;
+  }
+  &:hover {
+   background-color: darken($light, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $light;
+  }
+ }
+ &__dark,
+ &__grey {
+  color: $white;
+  background-color: $grey;
+  a {
+   color: $white;
+  }
+  &:hover {
+   background-color: darken($grey, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $dark;
+  }
+ }
+ &__black {
+  color: $white;
+  background-color: $black;
+  a {
+   color: $white;
+  }
+  &:hover {
+   background-color: darken($black, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $black;
+  }
+ }
+ &__white {
+  color: $dark;
+  background-color: $white;
+  a {
+   color: $dark;
+  }
+  &:hover {
+   background-color: darken($white, 5%);
+  }
+  &:focus,
+  &:active {
+   border-color: $white;
+  }
+ }
+}

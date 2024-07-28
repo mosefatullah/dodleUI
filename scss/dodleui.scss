@@ -1,0 +1,36 @@
+/**
+ * DodleUI
+ * @version v0.0.3
+ * @author Mohammad Sefatullah
+ * @link https://github.com/mosefatullah/ui/tree/main/dodleui
+ * @license MIT
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "./variables/_.scss";
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ box-sizing: border-box;
+ font-family: "Roboto", Arial, Helvetica, sans-serif;
+ scroll-behavior: smooth;
+}
+body {
+ height: 100%;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ text-rendering: optimizeLegibility;
+ text-size-adjust: 100%;
+ font-size: 16px;
+ font-weight: 400;
+ letter-spacing: 0.1px;
+ background-color: $white;
+ color: $dark;
+}
+
+@import "./typography/_.scss";
+@import "./layouts/_.scss";
+@import "./components/_.scss";

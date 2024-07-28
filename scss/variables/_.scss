@@ -1,0 +1,25 @@
+/* Best practice: remove root variables if not used at least once */
+@import "./colors.scss";
+@import "./gradients.scss";
+
+// Layouts
+$button-grey-border: rgba($grey, 0.2);
+$shadow-lg: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+ 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+$shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+ 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+$shadow-md: 0px 3px 2px rgba(142, 142, 142, 0.3);
+$shadow-inset: inset 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+ inset 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+$container-padding: 1.5rem;
+$row-gutter-x: 2.5rem;
+$row-gutter-y: 0;
+
+// Components
+$accordion-gutter-x: 0;
+$accordion-gutter-y: 1.5rem;
+$waiter-box-gap: 1rem;
+$waiter-box-height: 0.3rem;
+:root {
+ --ddui-field-border-color: var(--blue);
+}
