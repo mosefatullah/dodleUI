@@ -1,12 +1,12 @@
 # !/bin/bash
 
 if [ "$CF_PAGES_BRANCH" == "production" ]; then
-  echo "0"
+  echo "No production!"
 
 elif [ "$CF_PAGES_BRANCH" == "staging" ]; then
-  echo "1"
+  echo "No staging!"
 
 else
-  echo "2"
+  echo "No building!"
   
 fi
