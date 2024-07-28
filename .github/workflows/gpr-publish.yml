@@ -19,9 +19,7 @@ jobs:
         node-version: '14'
 
     - name: Configure npm for GitHub Packages
-      run: |
-         echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN_GITHUB }}" > ~/.npmrc
-         npm config set @mosefatullah:registry=https://npm.pkg.github.com
+      run: echo "@mosefatullah:registry=https://npm.pkg.github.com/mosefatullah:_authToken=${{ secrets.TOKEN_GITHUB }}" > ~/.npmrc
 
     - name: Publish to GitHub Packages
       run: npm publish --registry=https://npm.pkg.github.com
