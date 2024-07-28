@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+        registry-url: 'https://npm.pkg.github.com'
 
     - name: Configure npm for GitHub Packages
       run: npm config set //npm.pkg.github.com/:_authToken ${{ secrets.TOKEN_GITHUB }}
