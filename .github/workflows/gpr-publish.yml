@@ -1,0 +1,23 @@
+name: Publish Package
+
+on:
+  push:
+    branches:
+      - main  # Change to your desired branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Publish package
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+      run: npm publish
