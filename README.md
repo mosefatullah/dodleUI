@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="DodleUI" src="assets/dodleui-logo.png" height="100" />
+  <img alt="DodleUI" src="https://cdn.dodleui.pages.dev/img/dodleui-logo.png" height="100" />
 </p>
 <h1 align="center">DodleUI</h1>
 <p align="center">
@@ -27,37 +27,68 @@ npm install dodleui
 
 <p>View <a href="https://npmjs.com/package/dodleui" target="_blank">npm package</a> or <a href="https://yarnpkg.com/package/dodleui" target="_blank">yarn package</a>.</p>
 
+### Download
+
 Also, you can download the zip file & then keep the `dist` folder in your project directory. You can also rename the folder as you wish. For example we use `dodleui`.
 
 <a href="https://github.com/mosefatullah/dodleui/zipball/main">Download the zip file</a>
 
-### CDN
+### Using CDN
+
+
+<div align="center"><b>Unpkg</b></div>
+<hr />
+
+<p>(ℹ️) <span style="color: #999">We prefer using unpkg as it is a reliable CDN.</span></p>
+
+<p>DodleUI CSS:</p>
+
+```html
+<link
+ rel="stylesheet"
+ href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.min.css"
+/>
+```
+
+<p>DodleUI JS:</p>
+
+- ES6 (Recommended): <a href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.js">https://unpkg.com/dodleui@1.0.0/dist/dodleui.js</a> <br/>
+- UMD: <a href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js">https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js</a> <br/>
+
+<br/>
+<div align="center"><b>DodleUI</b></div>
+<hr />
 
 DodleUI CSS:
+
 ```html
-<link rel="stylesheet" href="https://unpkg.com/dodleui@1.0.0/dist/dodleui.min.css"></script>
+<link
+ rel="stylesheet"
+ href="https://cdn.dodleui.pages.dev/1.0.0/dodleui.min.css"
+/>
 ```
 
-For DodleUI JS, you can use recommended ES6 module system:
-```html
-<script type="module">
-  import $ from "https://unpkg.com/dodleui@1.0.0";
-  $()...
-</script>
-```
-Or, you can use old system:
-```html
-<script src="https://unpkg.com/dodleui@1.0.0/dist/dodleui.umd.js"></script>
-<script type="text/javascript">
-  new DodleUI()...
-</script>
-```
+<p>DodleUI JS:</p>
+
+- ES6 (Recommended): <a href="https://cdn.dodleui.pages.dev/1.0.0/dodleui.js">https://cdn.dodleui.pages.dev/1.0.0/dodleui.js</a> <br/>
+- UMD: <a href="https://cdn.dodleui.pages.dev/1.0.0/dodleui.umd.js">https://cdn.dodleui.pages.dev/1.0.0/dodleui.umd.js</a> <br/>
 
 <br/>
 
 ## 📦 Importing
 
+<p>(ℹ️) <span style="color: #999">We prefer ES6 version of JavaScript.</span></p>
+
 Here, we have imported DodleUI after downloading the zip file. But, you can use CDN as it saves time and cost.
+
+### CSS: Importing
+
+```html
+<link rel="stylesheet" href="/dodleui/dodleui.css" />
+...
+<button class="m-5 button_red"></button>
+```
+
 
 ### JavaScript: ES Module
 
@@ -99,14 +130,6 @@ UMD (Universal Module Definition) patterns for JavaScript modules that work ever
  <script>
       DodleUI("#abc")...
 </script>
-```
-
-### CSS: Importing
-
-```html
-<link rel="stylesheet" href="/dodleui/dodleui.css" />
-...
-<button class="m-5 button_red"></button>
 ```
 
 <br/>
