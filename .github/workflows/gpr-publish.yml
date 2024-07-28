@@ -1,4 +1,4 @@
-name: Publish Package
+name: Publish Package to GPR
 
 on:
   push:
@@ -6,18 +6,22 @@ on:
       - main  # Change to your desired branch
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Check out the repository
+      uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
 
-    - name: Publish package
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+    - name: Configure npm for GitHub Packages
+      run: npm config set //npm.pkg.github.com/:_authToken ${{ secrets.TOKEN_GITHUB }}
+
+    - name: Publish to GitHub Packages
       run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
